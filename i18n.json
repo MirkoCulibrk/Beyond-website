@@ -1,0 +1,15 @@
+{
+    "locales":["en","sr"],
+    "defaultLocale":"sr",
+    "localeDetection": false,
+    "pages":{
+        "*":["common"],
+        "/":["home"],
+        "/product/[id]":["common"]
+    },
+    "interpolation": {
+        "prefix": "${",
+        "suffix": "}"
+      }
+     
+}

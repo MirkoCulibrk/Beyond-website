@@ -1,0 +1,12 @@
+@import '../sass/utils/global';
+@import '../sass/utils/variables';
+@import '../sass/utils/mixins';
+@import '../components/Nav/Nav.scss';
+@import '../components/UI/Modal/Modal.scss';
+@import '../components/UI/Button/Button.scss';
+@import '../sass/pages/mainPage.scss';
+@import '../components/Footer/Footer.scss';
+@import '../components/HomePage/Products/Products.scss';
+@import '../components/HomePage/Products/ProductItem.scss';
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import "../components/UI/ModalBuy/Modal.scss";

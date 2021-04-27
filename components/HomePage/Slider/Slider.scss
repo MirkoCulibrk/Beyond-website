@@ -1,0 +1,41 @@
+.slider{
+    .container{
+        
+        background-image: url('../../../public/bg2.jpg');
+        padding: 50px 20px ;
+        margin-bottom: 50px;
+        background-image: cover;
+        background-position: center;
+        >div:last-child{
+            max-width: 1000px !important;
+            margin: 0 auto !important;
+            border-radius: 5px !important;
+        }
+    }
+    &-text{
+        text-align: center;
+        margin: 50px 0;
+        h1{
+            
+            @include font(3.25rem,600,$mainColor);
+            font-family: 'Catamaran',sans-serif;
+            line-height: 1.154em;
+            margin-bottom: 10px;
+        }
+        h5{
+            @include font(1.2rem,400,$secondTextColor);
+        }
+    }
+}
+@include customMaxBreakPoint(576){
+    .slider{
+        &-text{
+            h1{
+                font-size: 2.3rem;
+            }
+            h5{
+                font-size: 1rem;
+            }
+        }
+    }
+}

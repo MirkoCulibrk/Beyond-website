@@ -1,0 +1,136 @@
+.banner{
+    
+    &-container{
+        background-image: url('../../../public/background.png');
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 20px 0 60px 0;
+        &--main{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    &-text{
+        z-index: 9;
+        @include font(2rem,600,$mainColor);
+        font-family: $secondFont;
+        max-width: 467px;
+        text-align: left;
+        line-height: 59px;
+        &--info{
+            @include font(1.3rem,300,rgb(138, 138, 138));
+            text-align: left;
+            line-height: 2.3rem;
+        }
+    }
+    &-imgcontainer{
+        div:nth-of-type(2){
+            margin-left: 15px !important;
+        }
+        &--image{
+            border-radius: 5px;
+            margin-left: 25px;
+        }
+    }
+    &-offer{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        &video{
+            width: 61%;
+            padding-right: 3%;
+            display: flex;
+            video{
+                width: 100%;
+            }
+        }
+        &--info{
+            width: 38%;
+            padding: 50px 0 50px 50px;
+            h6{
+                @include font(1.1rem,400,$secondTextColor); 
+                margin: 15px 15px 30px;
+            }
+        }
+        &--heading{
+            @include font(2.18rem,600,$mainColor);
+            font-family: 'Catamaran',sans-serif;
+            line-height: 1.257em;
+            text-align: center;
+        }
+        &-info{
+            margin:15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .icon{
+                margin-right: 10px;
+                color:$secondColor;
+                font-size: 0.8rem;
+            }
+            p{
+                @include font(0.9rem,400,$secondTextColor)
+            }
+        }
+    }
+  
+}
+@include customMaxBreakPoint(992){
+    .banner{
+        &-imgcontainer{
+            > div:first-child{
+                display: none !important;
+            }
+            > div:last-child{
+                margin-right: 15px !important;
+            }
+        }
+    }
+}
+@include customMaxBreakPoint(768){
+    .banner{
+        
+    &-offer{
+        flex-direction: column;
+        &video{
+            width: 100%;
+            padding: 0 20px;
+        }
+        &--info{
+            width: 100%;
+           padding: 50px 0;
+           justify-content: center;
+        }
+        &-info{
+            justify-content: center;
+        }
+    }
+    }
+}
+
+@include customMaxBreakPoint(576){
+    .banner{
+        &-text{
+            margin: 0 15px;
+            > div:first-child{
+                display: none !important;
+            }
+            h1{
+                font-size: 2.7rem;
+            }
+            h5{
+                line-height: 2.1rem;
+                margin-bottom: 25px;
+            }
+        }
+        &-imgcontainer{
+            > div:last-child{
+                display: none !important;
+            }
+        }
+    }
+}

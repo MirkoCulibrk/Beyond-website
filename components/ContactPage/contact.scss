@@ -1,0 +1,125 @@
+.contact{
+    padding: 80px 0;
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    &-imgcontainer{
+        width: 40%;
+        div:first-child{
+            border-radius: 5px;
+        }
+    }
+    &-formcontainer{
+        width: 60%;
+        padding:  0 80px;
+        h1{
+            @include font(2rem,600,$mainColor);
+            font-family: $secondFont;
+            margin-bottom: 5px;
+            line-height: 1.119em;
+        }
+        h6{
+            @include font(1rem,400,$textColor);
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+        form{
+            margin-top: 15px;
+        }
+        .modal-body--form{
+            display: flex;
+            flex-direction: column;
+        }
+        .modal-formfirst{
+            display: flex;
+            flex-direction: row;
+        }
+        .first{
+            width: 45%;
+        }
+        .first:first-child{
+            margin-right: 10%;
+        }
+        label{
+            @include font(1rem,600,$mainColor);
+            text-align: left;
+            font-family: $secondFont;
+            margin-bottom: 5px;
+        }
+        input,textarea{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            vertical-align: top;
+            margin: 0 0 10px;
+            margin-bottom: 10px;
+            padding: 11px 10px;
+            font-family: inherit;
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: inherit;
+            color: #8a8a8a;
+            background-color: transparent;
+            border: 2px solid #dce6f5;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline: 0;
+            -webkit-appearance: none;
+            transition: color .2s ease-in-out,background-color .2s ease-in-out,border-color .2s ease-in-out;
+            &:focus,&:active{
+                border:2px solid rgba($mainColor,0.6)
+            }
+        }
+        button{
+            background-color: $mainColor;
+            @include font(1rem,600,#fff);
+            border-radius: 5px;
+            border: none;
+            font-family: $secondFont;
+            padding: 8px 35px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        
+        
+    }
+}
+@include customMaxBreakPoint(992){
+    .contact-formcontainer{
+        padding: 0 40px;
+    }
+}
+@include customMaxBreakPoint(790){
+    .contact{
+        .container{
+            justify-content: center;
+        }
+    }
+    .contact-imgcontainer{
+        display: none;
+    }
+    .contact-formcontainer{
+        width: 80%;
+        padding: 0 40px;
+    }
+}
+@include customMaxBreakPoint(620){
+    .contact-formcontainer{
+        width: 100%;
+
+    }
+}
+@include customMaxBreakPoint(420){
+    .contact-formcontainer .modal-formfirst{
+        flex-direction: column;
+    }
+    .contact-formcontainer{
+        width: 100%;
+        padding: 0 20px;
+        .first{
+            width: 100%;
+        }
+
+    }
+}

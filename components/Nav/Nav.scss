@@ -1,0 +1,76 @@
+@import '../UI/SelectLang/SelectLanguage.scss';
+@import '../UI/SideMenu/SideMenu.scss';
+.navbar{
+    position: relative;
+    width: 100%;
+    vertical-align: top;
+    height: 100px;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0 40px;
+    .logo{
+        cursor: pointer;
+    }
+    &-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+    &-nav{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .hidden{
+            display: none;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            a{
+                display: flex;
+                position: relative;
+                align-items: center;
+                height: 100%;
+                @include font(1rem,600,$mainColor);
+                padding: 0 2.12em;
+                text-transform: uppercase;
+            }
+        }
+    }
+  
+}
+.mobilenav{
+    background-color: white;
+    padding: 20px 0;
+    position: relative;
+    top: -250px;
+    z-index: 1;
+    display: none;
+    transition: all 0.3s ease-in-out;
+    &-nav{
+        ul{
+            a{
+                display: flex;
+                justify-content: center;
+                @include font(1rem,600,$mainColor);
+                padding: 0.5rem 2.12em;
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+    }
+    
+}
+.activenav{
+    display: block;
+    top: 0;
+}
+@include customMaxBreakPoint(480){
+    .navbar{
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,70 @@
+.numbers{
+    padding:30px 0;
+    .container{
+        
+    justify-content: space-between;
+    }
+    &-container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        &--count{
+            span{
+                @include font(6rem, 600,$numberColor);
+                font-family: 'Catamaran',sans-serif;
+            }
+        }
+        &--content{
+            position: absolute;
+            span{
+                @include font(1.3rem, 600,$mainColor);
+                font-family: 'Catamaran',sans-serif;
+            }
+        }
+    }
+}
+@include customMaxBreakPoint(1200){
+    .numbers{
+        &-container{
+            &--count{
+                span{
+                    font-size: 5.3rem;
+                }
+            }
+        }
+    }
+}
+@include customMaxBreakPoint(992){
+    .numbers{
+        .container{
+            
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &-container{
+            margin: 0 auto;
+            &--count{
+                span{
+                    font-size: 4.2rem;
+                }
+            }
+            &--content{
+                span{
+                   font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
+@include customMaxBreakPoint(500){
+    .numbers{
+        .container{
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+    }
+}

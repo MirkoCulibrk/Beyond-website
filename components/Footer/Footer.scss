@@ -1,0 +1,94 @@
+.footer{
+    padding: 120px 0 60px;
+    background-color: $mainColor;
+    .center{
+        align-items: center;
+    }
+    &-info{
+        &--social{
+            width: 33%;
+            
+            h5{
+                @include font(0.9rem,300,#fff);
+                margin: 20px 0;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+       
+    }
+    &-social{
+        width: 33%;
+        display: flex;
+        justify-content: center;
+        &--heading{
+            @include font(1.25rem,600,#fff);
+            font-family: $secondFont;
+            text-align: left;
+            line-height: 29px;
+            margin-bottom: 20px;
+        }
+    }
+    &-socialcontainer{
+        margin-top:10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .sidebar-icons{
+            color:#fff;
+            margin:8px 10px 0 0;
+        }a{
+            @include font(0.9rem,300,#fff);
+        }
+    }
+    &-location{
+        width: 33%;
+        display: flex;
+justify-content: center;
+    }
+}
+.footer-bottom{
+
+    padding: 7px 0;
+    background-color: #1c1e74;
+    border-top: 0 solid #e1e1e1;
+    text-align: center;
+    @include font(0.9rem,400,#fff)
+}
+@include customMaxBreakPoint(768){
+    .footer{
+        padding: 60px;
+        .row{
+            flex-direction: column !important;
+
+        }
+        &-info{
+            &--social{
+                width: 100%;
+                margin-bottom: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h5{
+                    text-align: center;
+                }
+                .icons{
+                    justify-content: center;
+                }
+            }
+        }
+        &-social{
+            width: 100%;
+            margin-bottom: 50px;
+            &--heading{
+                text-align: center;
+            }
+        }
+        &-location{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

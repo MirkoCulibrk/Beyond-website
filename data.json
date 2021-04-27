@@ -1,0 +1,76 @@
+[
+    {
+        "id":1,
+        "img":"/product1.jpg",
+        "images":[
+            {
+                "original":"/product1.jpg",
+                "thumbnail":"/product1.jpg"
+            },{
+                "original":"/beyond-II-blue.jpg",
+                "thumbnail":"/beyond-II-blue.jpg"
+            },{
+                "original":"/beyond-II-Silver.jpg",
+                "thumbnail":"/beyond-II-Silver.jpg"
+            }
+        ],
+        "title":"BEYOND II Ultra Whitening Accelerator"
+
+    },
+    {
+        "id":2,
+        "img":"/polus-ultra.jpg",
+        "images":[
+            {
+                "original":"/polus-ultra.jpg",
+                "thumbnail":"/polus-ultra.jpg"
+            }
+        ],
+        "title":"BEYOND Polus Advanced Ultra Whitening Accelerator"
+        
+    },
+    {
+        "id":3,
+        "img":"/solo-kit.jpg",
+        "images":[
+            {
+                "original":"/solo-kit.jpg",
+                "thumbnail":"/solo-kit.jpg"
+            }
+        ],
+        "title":"BEYOND SOLO Single Treatment Kit"
+    },
+    {
+        "id":4,
+        "img":"/toothpaste-combo.jpg",
+        "images":[
+            {
+                "original":"/toothpaste-combo.jpg",
+                "thumbnail":"/toothpaste-combo.jpg"
+            }
+        ],
+        "title":"Pearl White® Whitening Toothpaste"
+    },
+    {
+        "id":5,
+        "img":"/Max5.jpg",
+        "images":[
+            {
+                "original":"/Max5.jpg",
+                "thumbnail":"/Max5.jpg"
+            }
+        ],
+        "title":"BEYOND MAX5 Treatment Kit"
+    },
+    {
+        "id":6,
+        "img":"/Max5.jpg",
+        "images":[
+            {
+                "original":"/Max5.jpg",
+                "thumbnail":"/Max5.jpg"
+            }
+        ],
+        "title":"BEYOND MAX5 Treatment Kit"
+    }
+]

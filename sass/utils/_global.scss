@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;700&family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+}
+a{
+  text-decoration: none;
+}
+.height{
+  height: 100%;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.container{
+    padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+    .container {
+      width: 820px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }

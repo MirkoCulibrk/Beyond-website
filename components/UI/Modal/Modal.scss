@@ -1,0 +1,106 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: -490px;
+    width: 490px;
+    height: 100%;
+    min-height: 100%;
+    padding: 94px 66px 35px;
+    border-left: 1px solid #dce6f5;
+    border-right: 1px solid #dce6f5;
+    background-color: #fff;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 9999;
+    transition: all .6s cubic-bezier(.77,0,.175,1);
+    &-close{
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        top:-50px;
+    }
+    &-text{
+        margin: 0 0 35px 0;
+        p{
+            margin: 10px 0;
+            line-height: 1.667em;
+            @include font(0.9rem,300,rgba(0,0,0,0.5))
+        }
+    }
+    &-social{
+        &--heading{
+            @include font(1.25rem,600,$mainColor);
+            font-family: $secondFont;
+            text-align: left;
+            line-height: 29px;
+            margin-bottom: 20px;
+        }
+    }
+    &-socialcontainer{
+        margin-top:10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .sidebar-icons{
+            color:$secondColor;
+            margin:8px 10px 0 0;
+        }a{
+            @include font(0.9rem,300,$textColor);
+        }
+    }
+    &-socialholder{
+        margin-top: 30px;
+        &--heading{
+            @include font(1.25rem,600,$mainColor);
+            font-family: $secondFont;
+            text-align: left;
+            line-height: 29px;
+            margin-bottom: 25px;
+        }
+        &--container{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
+.active{
+    right: 0;
+    visibility: visible;
+}
+//icon
+.socialicon{
+    width: 2.7857em;
+    height: 2.7857em;
+    font-size: 14px;
+    line-height: 2.7857em;
+    text-align: center;
+    color: #fff;
+    background-color: #273477;
+    transition: background-color .2s ease-in,color 0.2s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 15px;
+    &:hover{
+        background-color: $mainColor;
+    }
+    .sidebar-icons{
+        color:white;
+        font-size: 1.1rem;
+        margin-top: 13px;
+    }
+}
+.white{
+    background-color: #fff;
+    cursor: pointer;
+    &:hover{
+        background-color: $secondColor;
+        .sidebar-icons{
+            color:#fff;
+        }
+    }
+    .sidebar-icons{
+        color:$mainColor;
+    }
+}
