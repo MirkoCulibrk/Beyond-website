@@ -56,7 +56,7 @@ const contactus = () => {
         <section className="contact">
             <div className="container">
                 <div className="contact-imgcontainer">
-                    <Image src="/contact.jpg" layout="responsive" width="400" height="450" quality={100}></Image>
+                    <Image src="/contact.webp" layout="responsive" width="400" height="450" quality={100}></Image>
                 </div>
                 <div className="contact-formcontainer">
                     <h1>{t('common:contacth1')}</h1>

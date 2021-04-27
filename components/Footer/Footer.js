@@ -9,15 +9,15 @@ const Footer = () => {
     const {t} =useTranslation();
     return (
         <>
-        <footer role="footer" className="footer">
+        <footer role="contentinfo" className="footer">
             <div className="container row">
                 <div className="footer-info--social">
                     <Link href="/">
-                        <Image src="/logo3.png" layout="fixed" width="190" height="60"></Image>
+                        <Image src="/logo3.png" layout="fixed" width="190" height="60" alt="footer logo"></Image>
                     </Link>
-                    <h5>
+                    <h3>
                         {t('common:footerh5')}
-                        </h5>      
+                        </h3>      
                     
                     <div style={{display:'flex',flexDirection:'row'}} className="icons">
                      <SocialIcon type="white"></SocialIcon>   
@@ -35,7 +35,7 @@ const Footer = () => {
                                         </div>
                                     </IconContext.Provider>
                                 </div>
-                                <a href="tel:+381640157707"><span>+381640157707</span></a>
+                                <a href="tel:+381640157707" aria-label="Phone"><span>+381640157707</span></a>
                             </div>
                             <div className="footer-socialcontainer">
                                 <div className="footer-socialcontainer--icon">
@@ -43,7 +43,7 @@ const Footer = () => {
                                         <FaEnvelope></FaEnvelope>
                                     </IconContext.Provider>
                                 </div>
-                                <a href="mailto:beyondteethserbia@gmail.com">beyondteethserbia@gmail.com</a>
+                                <a href="mailto:beyondteethserbia@gmail.com"aria-label="Email">beyondteethserbia@gmail.com</a>
                             </div>
                             <div className="footer-socialcontainer">
                                 <div className="foooter-socialcontainer--icon">
@@ -51,7 +51,7 @@ const Footer = () => {
                                         <FaMapMarkerAlt></FaMapMarkerAlt>
                                     </IconContext.Provider>
                                 </div>
-                                <a href="#">place</a>
+                                <a href="#" aria-label="Place">place</a>
                             </div>
                     </div>
                 </div>

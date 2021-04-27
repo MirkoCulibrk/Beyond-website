@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState} from 'react'
 import {useRouter} from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -13,7 +13,7 @@ const SelectLanguage = () => {
             <ul className="default_option" onClick={()=>setIsOpen((prevState)=>!prevState)}>
                 <div className="option">
                     <div className="option_flag">
-                        <Image src={`/flags/${locale}.svg`} layout="fixed" width="20" height="15"></Image>
+                        <Image src={`/flags/${locale}.svg`} layout="fixed" width="20" height="15"alt={`${locale} flag`}></Image>
                     </div>
                     <span>{locale}</span>
                     <div className="option_icon">
@@ -23,10 +23,10 @@ const SelectLanguage = () => {
                     </div>
                 </div>
             </ul>
-            <ul className="select_ul">
+            <ul className="select_ul" role="tablist">
                     {router.locales.map((locale)=>(
-                        <li key={locale} onClick={()=>setIsOpen((prevState)=>!prevState)}>
-                            <Link href={router.asPath} locale={locale}>
+                        <li key={locale} onClick={()=>setIsOpen((prevState)=>!prevState)}  role="tab"> 
+                            <Link href={router.asPath} locale={locale} >
                                 <div className="option">
                                     <div className="icon">
                                         <Image src={`/flags/${locale}.svg`} layout="fixed" width="20" height="15"></Image>

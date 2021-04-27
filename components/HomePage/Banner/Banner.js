@@ -15,14 +15,14 @@ const Banner = () => {
                         <Image src="/award.png" layout="fixed" width="130" height="80" quality="100" alt="Medals for Top Whitening System Award "></Image> 
                             <h1 className="bannner-text--heading">{t('home:h1')}</h1>
                                                   
-                            <h5 className="banner-text--info">{t('home:bannerh5')}</h5>
+                            <h2 className="banner-text--info">{t('home:bannerh5')}</h2>
                             <Button text={t('home:learnmore')}></Button>
                                           
                             
                         </div>
                         <div className="banner-imgcontainer row">
                             <Image src="/women.jpg" className="banner-imgcontainer--img"layout="intrinsic" width="310" height="485" alt="women smile"quality={100}/>
-                            <Image src="/pic2.jpg" layout="intrinsic" width="310" height="485" className="banner-imgcontainer--image" quality={100}/>
+                            <Image src="/pic2.jpg" layout="intrinsic" width="310" height="485" className="banner-imgcontainer--image" quality={100} alt="product"/>
                             
                         </div>
                     </div>

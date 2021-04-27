@@ -1,11 +1,8 @@
 
 import {useSideMenu} from '../../../context/useSideMenu';
-import { useMediaQuery } from 'react-responsive'
 const SideMenu = ({type}) => {
    const {handleSideMenu}=useSideMenu();
-   const isSmallDevice=useMediaQuery({
-       query:'max-device-width: 768px'
-   })
+
     const  handlerender=()=>{
        let render;
        if(type=='open'){

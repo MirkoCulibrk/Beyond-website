@@ -8,7 +8,7 @@
         &--social{
             width: 33%;
             
-            h5{
+            h3{
                 @include font(0.9rem,300,#fff);
                 margin: 20px 0;
             }
@@ -70,7 +70,7 @@ justify-content: center;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                h5{
+                h3{
                     text-align: center;
                 }
                 .icons{

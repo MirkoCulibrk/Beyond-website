@@ -12,7 +12,7 @@
         text-align: center;
         &--count{
             span{
-                @include font(6rem, 600,$numberColor);
+                @include font(6rem, 600,#DBEAFC);
                 font-family: 'Catamaran',sans-serif;
             }
         }

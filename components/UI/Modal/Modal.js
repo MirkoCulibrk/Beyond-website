@@ -33,7 +33,7 @@ const Modal = () => {
                             </div>
                         </IconContext.Provider>
                     </div>
-                    <a href="tel:+381640157707"><span>+381640157707</span></a>
+                    <a href="tel:+381640157707" aria-label="Phone"><span>+381640157707</span></a>
                 </div>
                 <div className="sidebar-socialcontainer">
                     <div className="sidebar-socialcontainer--icon">
@@ -41,7 +41,7 @@ const Modal = () => {
                             <FaEnvelope></FaEnvelope>
                         </IconContext.Provider>
                     </div>
-                    <a href="mailto:beyondteethserbia@gmail.com">beyondteethserbia@gmail.com</a>
+                    <a href="mailto:beyondteethserbia@gmail.com" aria-label="Email">beyondteethserbia@gmail.com</a>
                 </div>
                 <div className="sidebar-socialcontainer">
                     <div className="sidebar-socialcontainer--icon">
@@ -49,7 +49,7 @@ const Modal = () => {
                             <FaMapMarkerAlt></FaMapMarkerAlt>
                         </IconContext.Provider>
                     </div>
-                    <a href="#">place</a>
+                    <a href="#" aria-label="Place">place</a>
                 </div>
             </div>
             <div className="sidebar-socialholder">

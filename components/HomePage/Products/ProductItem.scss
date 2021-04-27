@@ -4,7 +4,7 @@
         padding: 50px 0 30px;
         display: flex;
         flex-direction: row;
-        background-image: url('../../../public/background.png');
+        background-image: url('../../../public/background.webp');
         background-size: cover;
         background-position-x: center;
         background-position-y: center;
@@ -165,6 +165,9 @@
         flex-direction: column;
         padding-top: 20px;
     }
+    .products-container--product{
+        text-align: center;
+    }
     .product-infocontainer,.product-imgcontainer{
         width: 100%;
     }
@@ -177,6 +180,16 @@
     .product .additional-tehn .move{
         flex-direction: column;
         padding:  0 10px;
+    }
+    .additional-images--move{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+       
+    }
+    .product .additional-images--move img:nth-child(1){
+        left: 0;
     }
     .product .additional-tehn--info,.product .additional-tehn--image {
         width: 100%;
