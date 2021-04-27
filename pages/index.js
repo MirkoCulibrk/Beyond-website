@@ -9,7 +9,7 @@ export default function Home() {
     <>  
         <NextSeo
           title="Beyond International"
-          description="A short description goes here."
+          description=""
         />
         <Banner></Banner>
         <Numbers></Numbers>

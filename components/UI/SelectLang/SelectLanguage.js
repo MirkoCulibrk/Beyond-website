@@ -10,8 +10,8 @@ const SelectLanguage = () => {
     const [isOpen,setIsOpen]=useState(false);
     return (
         <div className={`select_wrap ${isOpen?'active':''}`}>
-            <ul className="default_option" onClick={()=>setIsOpen((prevState)=>!prevState)}>
-                <div className="option">
+            <ul className="default_option" onClick={()=>setIsOpen((prevState)=>!prevState)}  role="tablist">
+                <div className="option" role="tab">
                     <div className="option_flag">
                         <Image src={`/flags/${locale}.svg`} layout="fixed" width="20" height="15"alt={`${locale} flag`}></Image>
                     </div>

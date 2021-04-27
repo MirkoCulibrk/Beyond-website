@@ -7,7 +7,6 @@ const Number = ({data}) => {
     useEffect(()=>{
         let start=0;
         const end=parseInt(number.substring(0,2));
-        console.log(end)
         if(start==number)return;
         let totalMiliSecDuration=parseInt(duration);
         let incrementTime=(totalMiliSecDuration/end)*1000;
@@ -18,7 +17,7 @@ const Number = ({data}) => {
         },incrementTime);
     },[number,duration])
     return (
-        <div className="numbers-container">
+        <div className="numbers-container" key={count}>
             <div className="numbers-container--count">
                 <span>{count}</span>
             </div>

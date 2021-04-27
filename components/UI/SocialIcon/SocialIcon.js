@@ -6,7 +6,7 @@ const SocialIcon = ({type}) => {
     return (
         <>
         <div className={`socialicon ${type}`}>
-            <a href="" aria-label="Facebook" rel="noopener">
+            <a href="/" aria-label="Facebook" rel="noopener">
             <IconContext.Provider value={{ className: 'sidebar-icons' }}>
                 <FaFacebookF></FaFacebookF>
             </IconContext.Provider>

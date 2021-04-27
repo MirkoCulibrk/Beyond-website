@@ -6,6 +6,7 @@ import Sentence from '../../../components/UI/Sentence/Sentence';
 import ProductList from '../../../components/HomePage/Products/ProductList';
 import {useSideMenu} from '../../../context/useSideMenu';
 import AdditionalInfo from '../../../components/HomePage/AdditionalInfo/AdditionalInfo';
+import { NextSeo } from 'next-seo';
 const index = ({product,related}) => {
   const {t}=useTranslation();
   const {handleBuyingModal}=useSideMenu();
@@ -13,6 +14,10 @@ const index = ({product,related}) => {
   const array=t(`common:description${id}`).split('\n');
     return (
       <>
+        <NextSeo
+            title={`Beyond Product ${id}`}
+            description=""
+          />
           <section className="product">
           <div className="container">
               <div className="product-container">

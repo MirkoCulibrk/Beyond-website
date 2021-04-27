@@ -1,7 +1,7 @@
 .products{
     padding:70px 0 150px;
     &--heading{
-        @include font(3.25rem,600,$mainColor);
+        @include font(3rem,600,$mainColor);
         font-family: 'Catamaran',sans-serif;
         line-height: 1.154em;
         margin-bottom: 50px;
@@ -61,7 +61,7 @@
         &--info{
             padding:  15px 0;
 
-            h5{
+            h3{
                 font-family: 'Catamaran',sans-serif;
                 font-weight: 600;
                 color: #1e2d78;

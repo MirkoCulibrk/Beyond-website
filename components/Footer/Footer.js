@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="container row">
                 <div className="footer-info--social">
                     <Link href="/">
-                        <Image src="/logo3.png" layout="fixed" width="190" height="60" alt="footer logo"></Image>
+                        <Image src="/logo2.png" layout="fixed" width="167" height="54" alt="footer logo"></Image>
                     </Link>
                     <h3>
                         {t('common:footerh5')}

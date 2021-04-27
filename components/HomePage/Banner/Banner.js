@@ -1,11 +1,13 @@
+import {useRef} from 'react';
 import useTranslation from 'next-translate/useTranslation'
 import Button from '../../UI/Button/Button';
 import Image from 'next/image';
-
 import {IconContext} from 'react-icons';
 import {FaCheck} from 'react-icons/fa';
 const Banner = () => {
     let {t} =useTranslation();
+    const offerRef=useRef(null);
+    const executeScroll = () => offerRef.current.scrollIntoView({behavior: "smooth",block: "start"})    
     return (
         <section role="banner" className="banner">
             <div className="container">
@@ -16,7 +18,7 @@ const Banner = () => {
                             <h1 className="bannner-text--heading">{t('home:h1')}</h1>
                                                   
                             <h2 className="banner-text--info">{t('home:bannerh5')}</h2>
-                            <Button text={t('home:learnmore')}></Button>
+                            <Button text={t('home:learnmore')} action={executeScroll}></Button>
                                           
                             
                         </div>
@@ -26,9 +28,9 @@ const Banner = () => {
                             
                         </div>
                     </div>
-                    <section className="banner-offer" id="info">
+                    <section className="banner-offer" ref={offerRef}>
                         <div className="banner-offervideo"  >
-                            <video src="/video.mp4" autoPlay={true} loop={true} muted={true} id="video"></video>
+                            <video src="/video.mp4" autoPlay={true} loop={true} muted={true} id="video" alt="video"></video>
                             {/* <Image src="/offer.jpg" layout="intrinsic" width="680" height="450px" alt="offer"></Image> */}
                         </div>
                         <div className="banner-offer--info" >

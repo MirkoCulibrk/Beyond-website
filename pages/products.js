@@ -1,7 +1,15 @@
 import Products from '../components/HomePage/Products/Products';
+import { NextSeo } from 'next-seo';
 const products = () => {
+    
     return (
-        <Products></Products>
+        <>
+            <NextSeo
+            title="Beyond Products"
+            description=""
+            />
+            <Products></Products>
+        </>
     )
 }
 

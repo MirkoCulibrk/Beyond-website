@@ -1,9 +1,9 @@
 
 
-const Button = ({text,action,btnType,selected}) => {
+const Button = ({text,action,btnType}) => {
     return (
         <div>
-            <button className={`button ${btnType}`} onClick={action} selected={selected} role="button"> {text}</button>
+            <button className={`button ${btnType}`} onClick={action} role="button"> {text}</button>
         </div>
     )
 }
