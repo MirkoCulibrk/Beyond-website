@@ -2,8 +2,6 @@ import {useRef} from 'react';
 import useTranslation from 'next-translate/useTranslation'
 import Button from '../../UI/Button/Button';
 import Image from 'next/image';
-import {IconContext} from 'react-icons';
-import {FaCheck} from 'react-icons/fa';
 const Banner = () => {
     let {t} =useTranslation();
     const offerRef=useRef(null);
@@ -29,30 +27,13 @@ const Banner = () => {
                         </div>
                     </div>
                     <section className="banner-offer" ref={offerRef}>
-                        <div className="banner-offervideo"  >
-                            <video src="/video.mp4" autoPlay={true} loop={true} muted={true} id="video" alt="video"></video>
-                            {/* <Image src="/offer.jpg" layout="intrinsic" width="680" height="450px" alt="offer"></Image> */}
-                        </div>
+                        
                         <div className="banner-offer--info" >
                             <h3 className="banner-offer--heading">{t('home:offerh1')}</h3>
-                            <div className="banner-offer-info">
-                                <IconContext.Provider value={{ className: 'icon' }}>
-                                    <FaCheck></FaCheck>
-                                </IconContext.Provider>
-                                <p>{t('home:consulting')}</p>
-                            </div>
-                            <div className="banner-offer-info">
-                                <IconContext.Provider value={{ className: 'icon' }}>
-                                    <FaCheck></FaCheck>
-                                </IconContext.Provider>
-                                <p>{t('home:consulting')}</p>
-                            </div>
-                            <div className="banner-offer-info">
-                                <IconContext.Provider value={{ className: 'icon' }}>
-                                    <FaCheck></FaCheck>
-                                </IconContext.Provider>
-                                <p>{t('home:consulting')}</p>
-                            </div>
+                            <h4>{t('home:info')}</h4>
+                        </div>
+                        <div className="banner-offervideo"  >
+                            <video src="/video.mp4" autoPlay={true} loop={true} muted={true} id="video" alt="video"></video>
                         </div>
                     </section>
                 </div>

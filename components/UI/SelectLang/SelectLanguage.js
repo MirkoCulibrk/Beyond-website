@@ -2,8 +2,6 @@ import React,{useState} from 'react'
 import {useRouter} from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
-import {IconContext} from 'react-icons';
-import {FaAngleDown,FaAngleUp} from 'react-icons/fa';
 const SelectLanguage = () => {
     let router=useRouter();
     let locale=router.locale;
@@ -17,9 +15,7 @@ const SelectLanguage = () => {
                     </div>
                     <span>{locale}</span>
                     <div className="option_icon">
-                        <IconContext.Provider value={{ className: 'icon' }}>
-                              {isOpen?<FaAngleUp></FaAngleUp>:<FaAngleDown></FaAngleDown>} 
-                        </IconContext.Provider>
+                              {isOpen?<svg xmlns="http://www.w3.org/2000/svg" className="icon" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.828l-4.95 4.95-1.414-1.414L12 8l6.364 6.364-1.414 1.414z"/></svg>:<svg xmlns="http://www.w3.org/2000/svg" className="icon" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"/></svg>} 
                     </div>
                 </div>
             </ul>

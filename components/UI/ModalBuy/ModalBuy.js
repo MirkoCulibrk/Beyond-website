@@ -1,6 +1,4 @@
-import React,{useState,useEffect} from 'react'
-import {IconContext} from 'react-icons';
-import {FaTimes} from 'react-icons/fa';
+import React,{useState,useEffect} from 'react';
 import {useSideMenu} from '../../../context/useSideMenu';
 import emailjs from 'emailjs-com';
 import {useRouter} from 'next/router';
@@ -11,7 +9,7 @@ const ModalBuy = () => {
     const router=useRouter();
     const locale=router.locale;
     const {t}=useTranslation();
-    const [type,setType]=useState('');
+    const [type,setType]=useState(null);
     const [alertMessage,setAlertMessage]=useState('');
     const [subject,setSubject]=useState('');
     const [name,setName]=useState('');
@@ -39,6 +37,8 @@ const ModalBuy = () => {
                     }else if(locale=='rs'){
                         setAlertMessage('Nešto je poslo po zlu.')
                     }
+                }).finally(()=>{
+                    setAlertMessage('');
                 });
     }
     useEffect(() => {
@@ -46,15 +46,15 @@ const ModalBuy = () => {
             setType(null);
             console.log('working')
         },3000);
-       return()=> clearInterval(time); 
+       return()=> {
+        console.log('hej')   
+        clearInterval(time)}; 
     }, [alertMessage])
     return (
         <div className={`modal-container ${isOpenModal?'activeModal':''}`} >
             <div className="modal-body">
                 <div className="close-container" onClick={handleBuyingModal}> 
-                <IconContext.Provider value={{className:'icon'}}>
-                    <FaTimes></FaTimes>
-                </IconContext.Provider>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="icon" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></svg>
                 </div>
                 <div className="modal-body--content">
                     <h1>{t('common:modalh1')}</h1>

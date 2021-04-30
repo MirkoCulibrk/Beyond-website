@@ -23,7 +23,7 @@ const Numbers = () => {
         <section className="numbers">
             <div className="container row">
                 {counts.map((count)=>(
-                    <Number data={count}></Number>
+                    <Number data={count} ></Number>
                 ))}  
             </div>
         </section>

@@ -108,6 +108,20 @@
         }
         
     }
+    &-results{
+        display: flex;
+        h2{
+            @include font(2.1rem,600,$mainColor);
+            font-family: 'Catamaran',sans-serif;
+            line-height: 1.154em;
+            text-align: center; 
+            margin: 30px 0;
+        }
+         img{
+            margin: 0 auto 50px;
+            max-width: 450px;
+        }
+    }
     &-related{
         margin: 10px 0 70px;
         h2{

@@ -42,8 +42,9 @@
         flex-direction: row;
         align-items: center;
         .sidebar-icons{
-            color:$secondColor;
+            fill:$secondColor;
             margin:8px 10px 0 0;
+            width: 100%;
         }a{
             @include font(0.9rem,300,$textColor);
         }
@@ -60,6 +61,11 @@
         &--container{
             display: flex;
             flex-direction: row;
+        }
+    }
+    .socialicon{
+        .sidebar-icons{
+            fill: #fff;
         }
     }
 }
@@ -82,13 +88,17 @@
     align-items: center;
     border-radius: 5px;
     margin-right: 15px;
+    a{
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .sidebar-icons{
+            fill:$mainColor;
+        }
+    }
     &:hover{
         background-color: $mainColor;
-    }
-    .sidebar-icons{
-        color:white;
-        font-size: 1.1rem;
-        margin-top: 13px;
     }
 }
 .white{
@@ -97,10 +107,11 @@
     &:hover{
         background-color: $secondColor;
         .sidebar-icons{
-            color:#fff;
+            fill:#fff;
         }
     }
     .sidebar-icons{
-        color:$mainColor;
+        fill:$mainColor;
+       
     }
 }

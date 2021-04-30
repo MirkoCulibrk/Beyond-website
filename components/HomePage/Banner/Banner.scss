@@ -38,22 +38,21 @@
     }
     &-offer{
         display: flex;
-        flex-direction: row;
-        width: 100%;
+        flex-direction: column;
         &video{
-            width: 61%;
-            padding-right: 3%;
+           width: 100%;
+            padding: 25px 20px;
             display: flex;
             video{
                 width: 100%;
             }
         }
         &--info{
-            width: 38%;
-            padding: 50px 0 50px 50px;
-            h6{
-                @include font(1.1rem,400,$secondTextColor); 
+            width: 100%;
+            h4{
+                @include font(1rem,400,$textColor); 
                 margin: 15px 15px 30px;
+                text-align: center
             }
         }
         &--heading{
@@ -61,21 +60,9 @@
             font-family: 'Catamaran',sans-serif;
             line-height: 1.257em;
             text-align: center;
+            margin: 15px 0 25px ;
         }
-        &-info{
-            margin:15px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            .icon{
-                margin-right: 10px;
-                color:$secondColor;
-                font-size: 0.8rem;
-            }
-            p{
-                @include font(0.9rem,400,$secondTextColor)
-            }
-        }
+        
     }
   
 }
@@ -102,7 +89,7 @@
         }
         &--info{
             width: 100%;
-           padding: 50px 0;
+           padding: 25px 0;
            justify-content: center;
         }
         &-info{

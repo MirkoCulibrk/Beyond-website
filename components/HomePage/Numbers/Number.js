@@ -17,7 +17,7 @@ const Number = ({data}) => {
         },incrementTime);
     },[number,duration])
     return (
-        <div className="numbers-container" key={count}>
+        <div className="numbers-container" key={count.id}>
             <div className="numbers-container--count">
                 <span>{count}</span>
             </div>

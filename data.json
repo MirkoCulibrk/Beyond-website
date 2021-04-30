@@ -12,6 +12,9 @@
             },{
                 "original":"/beyond-II-Silver.webp",
                 "thumbnail":"/beyond-II-Silver.webp"
+            },{
+                "original":"/results1.webp",
+                "thumbnail":"/results1.webp"
             }
         ],
         "title":"BEYOND II Ultra Whitening Accelerator",
@@ -25,6 +28,10 @@
             {
                 "original":"/polus-ultra.jpg",
                 "thumbnail":"/polus-ultra.jpg"
+            },
+            {
+                "original":"/results2.webp",
+                "thumbnail":"/results2.webp"
             }
         ],
         "title":"BEYOND Polus Advanced Ultra Whitening Accelerator",
@@ -62,6 +69,9 @@
             {
                 "original":"/Max5.jpg",
                 "thumbnail":"/Max5.jpg"
+            },{
+                "original":"/results5.webp",
+                "thumbnail":"/results5.webp"
             }
         ],
         "title":"BEYOND MAX5 Treatment Kit",
@@ -69,14 +79,14 @@
     },
     {
         "id":6,
-        "img":"/Max5.jpg",
+        "img":"/Magna-kit.jpg",
         "images":[
             {
-                "original":"/Max5.jpg",
-                "thumbnail":"/Max5.jpg"
+                "original":"/Magna-kit.jpg",
+                "thumbnail":"/Magna-kit.jpg"
             }
         ],
-        "title":"BEYOND MAX5 Treatment Kit",
-        "alt":"BEYOND MAX5 Treatment Kit"
+        "title":"BEYOND® MAGNA™ Solution Treatment Kit",
+        "alt":"BEYOND® MAGNA™ Solution Treatment Kit"
     }
 ]

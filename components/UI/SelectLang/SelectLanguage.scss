@@ -27,15 +27,14 @@
         }
         .option_icon{
             .icon{
-                color:$textColor;
-                font-size: 0.8rem;
+                fill:$textColor;
             }
         }
       
     }
     .select_ul{
         position: absolute;
-        top: 34px;
+        top: 35px;
         left: 0;
         width: 100%;
         background: #fff;

@@ -6,6 +6,7 @@ import Sentence from '../../../components/UI/Sentence/Sentence';
 import ProductList from '../../../components/HomePage/Products/ProductList';
 import {useSideMenu} from '../../../context/useSideMenu';
 import AdditionalInfo from '../../../components/HomePage/AdditionalInfo/AdditionalInfo';
+import Results from '../../../components/HomePage/Results/Results';
 import { NextSeo } from 'next-seo';
 const index = ({product,related}) => {
   const {t}=useTranslation();
@@ -37,6 +38,9 @@ const index = ({product,related}) => {
                 </div>
               </div>
               {id==2?<AdditionalInfo></AdditionalInfo>:null}
+              {id==1 && <Results id={id}></Results>}
+              {id==2 && <Results id={id}></Results>}
+              {id==5 && <Results id={id}></Results>}
               <div className="product-related">
                 <h2>{t('common:realted')}</h2>
                 <div className="row">

@@ -36,7 +36,7 @@
         flex-direction: row;
         align-items: center;
         .sidebar-icons{
-            color:#fff;
+            fill:#fff;
             margin:8px 10px 0 0;
         }a{
             @include font(0.9rem,300,#fff);
@@ -45,7 +45,17 @@
     &-location{
         width: 33%;
         display: flex;
-justify-content: center;
+        justify-content: center;
+        ul{
+            a{
+                display: flex;
+                font-family: inherit;
+                font-size: 1rem;
+                font-weight: 400;
+                color: #fff;
+                margin-bottom: 20px;
+            }
+        }
     }
 }
 .footer-bottom{
