@@ -2,7 +2,7 @@
 import { NextSeo } from 'next-seo';
 import {useState} from 'react';
 import useTranslation from 'next-translate/useTranslation';
-import Alert from '../components/UI/Info/Info';
+import Alert from '../components/UI/Info/Alert';
 import Image from 'next/image';
 import emailjs from 'emailjs-com';
 import {useRouter} from 'next/router';
@@ -10,8 +10,9 @@ const contactus = () => {
     const router=useRouter();
     const locale=router.locale;
     let {t} =useTranslation();
+    const [showAlert,setShowAlert]=useState(false);
     const [type,setType]=useState('');
-    const [alertMessage,setAlertMessage]=useState(null)
+    const [alertMessage,setAlertMessage]=useState('');
     const [subject,setSubject]=useState('');
     const [name,setName]=useState('');
     const [email,setEmail]=useState('');
@@ -20,13 +21,14 @@ const contactus = () => {
         e.preventDefault();
         emailjs.sendForm('service_45m4otr','template_528wdrr',e.target,'user_YcpAZT7O1wOp2TffKntpV')
                 .then(()=>{
-                    setType('success');
-                    setShowAlert(true)
+                   
                     if(locale=='en'){
                         setAlertMessage('Your message is sent.')
-                    }else if(locale=='rs'){
+                    }else if(locale=='sr'){
                         setAlertMessage('Vaša poruka je poslata')
                     }
+                    setType('success');
+                    setShowAlert(true)
                     
                 }).then(()=>{
                     setName('');
@@ -40,6 +42,7 @@ const contactus = () => {
                     }else if(locale=='rs'){
                         setAlertMessage('Nešto je pošlo po zlu.')
                     }
+                    setShowAlert(true)
                 });
     }
     return (
@@ -75,7 +78,7 @@ const contactus = () => {
                         <label htmlFor="text">{t('common:modalformMessage')}</label>
                             <textarea  name="message" id="text" required value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                         </div>
-                        {alertMessage && <Alert type={type} message={alertMessage}showAlert={setAlertMessage}></Alert>}
+                        {showAlert && <Alert type={type} message={alertMessage}showAlert={setShowAlert}></Alert>}
                         <button type="submit">{t('common:modalformButton')}</button>
                     </form>
                 </div>

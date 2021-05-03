@@ -1,10 +1,11 @@
 import {useEffect} from 'react';
-const Info = ({type,message,showAlert}) => {
+const Alert = ({type,message,showAlert}) => {
     useEffect(() => {
         setTimeout(()=>{
-            showAlert(null)
+            showAlert(false)
         },3000);
     }, []);
+    console.log('he',message)
     return (
         <>
         <div className={`alert ${type}`}>
@@ -14,4 +15,4 @@ const Info = ({type,message,showAlert}) => {
     )
 }
 
-export default Info
+export default Alert

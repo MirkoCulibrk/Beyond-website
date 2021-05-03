@@ -3,14 +3,15 @@ import {useSideMenu} from '../../../context/useSideMenu';
 import emailjs from 'emailjs-com';
 import {useRouter} from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
-import Alert from '../Info/Info';
+import Alert from '../Info/Alert';
 const ModalBuy = () => {
     const{isOpenModal,handleBuyingModal,isSuperSmall} = useSideMenu();
     const router=useRouter();
     const locale=router.locale;
     const {t}=useTranslation();
-    const [type,setType]=useState(null);
-    const [alertMessage,setAlertMessage]=useState(null);
+    const [showAlert,setShowAlert]=useState(false);
+    const [type,setType]=useState('');
+    const [alertMessage,setAlertMessage]=useState('');
     const [subject,setSubject]=useState('');
     const [name,setName]=useState('');
     const [email,setEmail]=useState('');
@@ -19,12 +20,14 @@ const ModalBuy = () => {
         e.preventDefault();
         emailjs.sendForm('service_45m4otr','template_528wdrr',e.target,'user_YcpAZT7O1wOp2TffKntpV')
                 .then(()=>{
-                    setType('success')
+                   
                     if(locale=='en'){
                         setAlertMessage('Your message is sent.')
-                    }else if(locale=='rs'){
+                    }else if(locale=='sr'){
                         setAlertMessage('Vaša poruka je poslata')
                     }
+                    setType('success')
+                    setShowAlert(true);
                     
                 }).then(()=>{
                     setName('');
@@ -43,17 +46,13 @@ const ModalBuy = () => {
         if(isOpenModal){
             document.body.style.overflow = 'hidden';
         }
-        const time=setTimeout(()=>{
-            setType(null);
-            console.log('working')
-        },3000);
        return()=> {
-        console.log('hej')   
         document.body.style.overflow = 'auto';
-        clearInterval(time)}; 
+       }; 
        
-    }, [alertMessage,isOpenModal]);
-    console.log(isSuperSmall)
+    }, [isOpenModal]);
+    console.log(alertMessage);
+    console.log(locale)
     return (
         <div className={`modal-container ${isOpenModal?'activeModal':''}`} >
             <div className="modal-body">
@@ -65,14 +64,14 @@ const ModalBuy = () => {
                     <p>{t('common:modalparagraph')}</p>
                     
                     <form onSubmit={handleSubmit}>
-                    {alertMessage && <Alert type={type} message={alertMessage} showAlert={setAlertMessage}></Alert>}
+                    {showAlert && <Alert type={type} message={alertMessage} showAlert={setShowAlert}></Alert>}
                         <div className="modal-form--body">
                             <label htmlFor="subject">{t('common:modalformSubject')}</label>
-                            <input type="text" name="subject" id="subject" required value={subject} onChange={(e)=>setSubject(e.target.value)}></input>
+                            <input type="text" name="subject" id="subject" required value={subject} onChange={(e)=>setSubject(e.target.value)} ></input>
                         </div>
                         <div className="modal-form--body">
-                            <label htmlFor="name">{t('common:modalformName')}</label>
-                            <input type="text" name="name" id="name" required value={name} onChange={(e)=>setName(e.target.value)}></input>
+                            <label htmlFor="name" >{t('common:modalformName')}</label>
+                            <input type="text" name="name" id="name" required value={name} onChange={(e)=>setName(e.target.value)} ></input>
                         </div>
                         <div className="modal-form--body">
                         <label htmlFor="email" >{t('common:modalformEmail')}</label>
