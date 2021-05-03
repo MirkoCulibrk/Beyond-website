@@ -3,7 +3,7 @@
 const Button = ({text,action,btnType}) => {
     return (
         <div>
-            <button className={`button ${btnType}`} onClick={action} role="button"> {text}</button>
+            <button className={`button ${btnType}`} onClick={action} > {text}</button>
         </div>
     )
 }

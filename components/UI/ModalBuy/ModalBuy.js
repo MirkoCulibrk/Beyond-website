@@ -76,7 +76,7 @@ const ModalBuy = () => {
                         </div>
                         <div className="modal-form--body">
                         <label htmlFor="text">{t('common:modalformMessage')}</label>
-                            <textarea type="text" name="message" id="text" required value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
+                            <textarea name="message" id="text" required value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                         </div>
                         <button type="submit">{t('common:modalformButton')}</button>
                     </form>

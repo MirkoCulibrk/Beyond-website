@@ -25,9 +25,9 @@ const SideMenu = ({type}) => {
    }
     return (
         <div className="menu">
-            <a className="menu--background">
+            <div className="menu--background">
                 {handlerender()}
-            </a>
+            </div>
         </div>
     )
 }

@@ -30,14 +30,17 @@
             justify-content: space-between;
             align-items: center;
             height: 100%;
-            a{
+            li{
                 display: flex;
                 position: relative;
                 align-items: center;
                 height: 100%;
-                @include font(1rem,600,$mainColor);
+               
                 padding: 0 2.12em;
                 text-transform: uppercase;
+                a{
+                    @include font(1rem,600,$mainColor);
+                }
             }
         }
     }
@@ -53,13 +56,15 @@
     transition: all 0.3s ease-in-out;
     &-nav{
         ul{
-            a{
+            li{
                 display: flex;
                 justify-content: center;
-                @include font(1rem,600,$mainColor);
                 padding: 0.5rem 2.12em;
                 text-transform: uppercase;
                 text-align: center;
+                a{
+                    @include font(1rem,600,$mainColor);    
+                }
             }
         }
     }

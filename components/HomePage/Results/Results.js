@@ -6,7 +6,7 @@ const Results = ({id}) => {
     return (
         <div className="product-results column">
             <h2>{t('common:results')}</h2>
-            <img src={`/results${id}.webp`} ></img>
+            <img  src={`/results${id}.webp`} ></img>
         </div>
     )
 }

@@ -25,7 +25,7 @@ const SelectLanguage = () => {
                             <Link href={router.asPath} locale={locale} >
                                 <div className="option">
                                     <div className="icon">
-                                        <Image src={`/flags/${locale}.svg`} layout="fixed" width="20" height="15"></Image>
+                                        <Image src={`/flags/${locale}.svg`} layout="fixed" width="20" height="15" alt={`${locale} language`}></Image>
                                     </div>
                                     <span>{locale}</span>
                                 </div>

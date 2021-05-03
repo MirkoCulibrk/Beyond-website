@@ -8,12 +8,12 @@ const AdditionalInfo = () => {
             <h2>{t('common:additionh1')}</h2>
             <div className="additional-images">
                 <div className="additional-images--move">
-                    <img src="/additional1.png" alt="led curling light"></img>
-                    <img src="/additional2.png" alt="Single tooth whitening function"></img>
+                    <img loading="lazy" src="/additional1.png" alt="led curling light"></img>
+                    <img  loading="lazy" src="/additional2.png" alt="Single tooth whitening function"></img>
                 </div>
                 <div className="additional-images--move">
-                    <img src="/additional3.png" alt="Air ionzer Purifier Function"></img>
-                    <img src="/additional4.png" alt="Remote Controled voice instruction function"></img>  
+                    <img loading="lazy" src="/additional3.png" alt="Air ionzer Purifier Function"></img>
+                    <img loading="lazy" src="/additional4.png" alt="Remote Controled voice instruction function"></img>  
                 </div>
                 
             </div>

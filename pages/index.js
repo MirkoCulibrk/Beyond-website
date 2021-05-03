@@ -7,10 +7,10 @@ import Products from '../components/HomePage/Products/Products';
 export default function Home() {
   return (
     <>  
+      
         <NextSeo
           title="Zvanični distributer Beyond proizvoda za Srbiju"
           description="Zvanični distributer Beyond proizvoda za Srbiju i prostor balkana. 10 godina za redom dobijena nagrada za najbolji sistem za beljenje zuba. 248000 zadovoljnih stomatologa širom sveta."
-          canonical="https://beyond-website-weld.vercel.app/"
           openGraph={{
             url:"https://beyond-website-weld.vercel.app/",
             title:"Zvanični distributer Beyond proizvoda za Srbiju",

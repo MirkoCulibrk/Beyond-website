@@ -6,7 +6,7 @@ const Footer = () => {
     const {t} =useTranslation();
     return (
         <>
-        <footer role="contentinfo" className="footer">
+        <footer className="footer">
             <div className="container row">
                 <div className="footer-info--social">
                     <Link href="/">
@@ -42,8 +42,8 @@ const Footer = () => {
                     <div className="center">
                         <h3 className="footer-social--heading">{t('common:footerlocation')}</h3>
                         <ul role="tablist">
-                            <Link href="/products" className="links" passHref><a role="tab">{t('common:navbarproducts')}</a></Link>
-                            <Link href="/contactus" className="links"  passHref><a role="tab">{t('common:navbarabout')}</a></Link>
+                            <li role="tab"> <Link href="/products" className="links">{t('common:navbarproducts')}</Link></li>
+                            <li role="tab"><Link href="/contactus" className="links" >{t('common:navbarabout')}</Link></li>
                         </ul> 
                     </div>
                 </div>

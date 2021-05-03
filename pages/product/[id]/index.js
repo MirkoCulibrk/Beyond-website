@@ -71,16 +71,3 @@ export const getServerSideProps=async ({params})=>{
     }
   }
 }
-// export const getStaticPaths= async () =>{
-//   //znaci mora se praviti svi pathovi ka dinamicnim stranicama
-//   const paths=data.map((product)=>({
-//     // vraca se objekat koji ima paramentre ka bas tom jer ima index i ide id zbog patha
-    
-//     params:{id:product.id.toString()},
-//   }));
-//   console.log(paths)
-//   return{
-//     paths,
-//     fallback:false
-//   }
-// }

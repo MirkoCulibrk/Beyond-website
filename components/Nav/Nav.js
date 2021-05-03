@@ -21,8 +21,13 @@ const Nav = () => {
                         
                         <nav className="navbar-nav">
                             <ul className={smallDevice?'hidden':''} role="tablist">
-                                <Link href="/products"  role="tab">{t('common:navbarproducts')}</Link>
-                                <Link href="/contactus"  role="tab">{t('common:navbarabout')}</Link>
+                                <li>
+                                    <Link href="/products"  role="tab">{t('common:navbarproducts')}</Link>
+                                </li>
+                                <li>
+                                    <Link href="/contactus"  role="tab">{t('common:navbarabout')}</Link>
+                                </li>
+                                
                             </ul>
                             <SelectLanguage></SelectLanguage>
                             <SideMenu type="open"></SideMenu>
@@ -34,8 +39,13 @@ const Nav = () => {
             <div className={`mobilenav ${smallDevice&&isOpen?'activenav':''}`}>
                     <nav className="mobilenav-nav">
                         <ul role="tablist">
-                            <Link href="/products" className="links"  role="tab">{t('common:navbarproducts')}</Link>
-                            <Link href="/contactus" className="links"  role="tab">{t('common:navbarabout')}</Link>
+                            <li role="tab">
+                                <Link href="/products" className="links" >{t('common:navbarproducts')}</Link>
+                            </li>
+                            <li role="tab">
+                                <Link href="/contactus" className="links"  >{t('common:navbarabout')}</Link>
+                            </li>
+                            
                         </ul> 
                     </nav>
             </div>

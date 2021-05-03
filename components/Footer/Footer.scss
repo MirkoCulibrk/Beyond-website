@@ -47,13 +47,16 @@
         display: flex;
         justify-content: center;
         ul{
-            a{
+            li{
                 display: flex;
-                font-family: inherit;
-                font-size: 1rem;
-                font-weight: 400;
                 color: #fff;
                 margin-bottom: 20px;
+                a{
+                    color: #fff;
+                    font-family: inherit;
+                    font-size: 1rem;
+                    font-weight: 400;
+                }
             }
         }
     }
