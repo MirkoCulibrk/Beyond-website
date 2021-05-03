@@ -7,13 +7,21 @@
     &-info{
         &--social{
             width: 33%;
-            
-            h3{
+            .logo{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                span{
+                    max-width: 200px;
+                    @include font(1rem,600,#fff);
+                    font-family: $secondFont;
+                    display: inline-flex;
+                    margin-left: 10px;
+                }
+            }
+            h1{
                 @include font(0.9rem,300,#fff);
                 margin: 20px 0;
-            }
-            img{
-                cursor: pointer;
             }
         }
        
@@ -83,7 +91,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                h3{
+                h1{
                     text-align: center;
                 }
                 .icons{
@@ -103,5 +111,10 @@
             display: flex;
             justify-content: center;
         }
+    }
+}
+@include customMaxBreakPoint(468){
+    .footer{
+        padding:60px 25px;
     }
 }

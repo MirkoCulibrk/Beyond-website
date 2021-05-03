@@ -14,17 +14,21 @@ const Nav = () => {
               <div className="container height">
                     <div className="navbar-container">
                         <div className="navbar-container--logo">
-                            <Link href="/">
-                                <Image src="/logo.png" height="50" width="190" layout="intrinsic" className="logo" alt="logo"></Image>
+                            <Link href="/"passHref>
+                                <a>
+                                    {smallDevice?null:<img src="/logo.png" height="45" width="40" layout="intrinsic" className="logo" alt="logo"></img>}
+                                    <span>{t('common:navlogo')}</span>
+                                </a>
+                                
                             </Link>
                         </div>
                         
                         <nav className="navbar-nav">
-                            <ul className={smallDevice?'hidden':''} role="tablist">
-                                <li>
+                            <ul className={smallDevice?'hidden':null} role="tablist">
+                                <li role="tab">
                                     <Link href="/products"  role="tab">{t('common:navbarproducts')}</Link>
                                 </li>
-                                <li>
+                                <li role="tab">
                                     <Link href="/contactus"  role="tab">{t('common:navbarabout')}</Link>
                                 </li>
                                 

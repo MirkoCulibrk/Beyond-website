@@ -16,6 +16,20 @@
         align-items: center;
         justify-content: space-between;
         height: 100%;
+        &--logo{
+            a{
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+            span{
+                max-width: 200px;
+                @include font(1rem,600,$mainColor);
+                font-family: $secondFont;
+                display: inline-flex;
+                margin-left: 10px;
+            }
+        }
     }
     &-nav{
         height: 100%;
@@ -74,8 +88,16 @@
     display: block;
     top: 0;
 }
+@include customMaxBreakPoint(768){
+    .navbar-container--logo span{
+        max-width: 150px;
+        font-size: 0.9rem;
+        margin:0;
+    }
+}
 @include customMaxBreakPoint(480){
     .navbar{
         padding: 0 10px;
     }
+   
 }

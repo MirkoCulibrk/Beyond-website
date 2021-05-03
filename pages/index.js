@@ -1,16 +1,19 @@
 
 import { NextSeo } from 'next-seo';
+
+import useTranslation from 'next-translate/useTranslation';
 import Banner from '../components/HomePage/Banner/Banner';
 import Numbers from '../components/HomePage/Numbers/Numbers';
 import Slider from '../components/HomePage/Slider/Slider';
 import Products from '../components/HomePage/Products/Products';
 export default function Home() {
+  let {t} =useTranslation();
   return (
     <>  
-      
+
         <NextSeo
-          title="Zvanični distributer Beyond proizvoda za Srbiju"
-          description="Zvanični distributer Beyond proizvoda za Srbiju i prostor balkana. 10 godina za redom dobijena nagrada za najbolji sistem za beljenje zuba. 248000 zadovoljnih stomatologa širom sveta."
+          title={`${t('common:title')}`}
+          description={`${t('common:seodescripion')}`}
           openGraph={{
             url:"https://beyond-website-weld.vercel.app/",
             title:"Zvanični distributer Beyond proizvoda za Srbiju",
@@ -51,6 +54,7 @@ export default function Home() {
               }
             ]
           }}
+          keywords={`${t('common:mainPageKeywords')}`}
         />
         <Banner></Banner>
         <Numbers></Numbers>

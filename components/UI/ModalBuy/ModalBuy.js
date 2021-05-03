@@ -5,12 +5,12 @@ import {useRouter} from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import Alert from '../Info/Info';
 const ModalBuy = () => {
-    const{isOpenModal,handleBuyingModal} = useSideMenu();
+    const{isOpenModal,handleBuyingModal,isSuperSmall} = useSideMenu();
     const router=useRouter();
     const locale=router.locale;
     const {t}=useTranslation();
     const [type,setType]=useState(null);
-    const [alertMessage,setAlertMessage]=useState('');
+    const [alertMessage,setAlertMessage]=useState(null);
     const [subject,setSubject]=useState('');
     const [name,setName]=useState('');
     const [email,setEmail]=useState('');
@@ -37,19 +37,23 @@ const ModalBuy = () => {
                     }else if(locale=='rs'){
                         setAlertMessage('Nešto je poslo po zlu.')
                     }
-                }).finally(()=>{
-                    setAlertMessage('');
                 });
     }
     useEffect(() => {
+        if(isOpenModal){
+            document.body.style.overflow = 'hidden';
+        }
         const time=setTimeout(()=>{
             setType(null);
             console.log('working')
         },3000);
        return()=> {
         console.log('hej')   
+        document.body.style.overflow = 'auto';
         clearInterval(time)}; 
-    }, [alertMessage])
+       
+    }, [alertMessage,isOpenModal]);
+    console.log(isSuperSmall)
     return (
         <div className={`modal-container ${isOpenModal?'activeModal':''}`} >
             <div className="modal-body">
@@ -61,7 +65,7 @@ const ModalBuy = () => {
                     <p>{t('common:modalparagraph')}</p>
                     
                     <form onSubmit={handleSubmit}>
-                    {alertMessage && <Alert type={type} message={alertMessage}></Alert>}
+                    {alertMessage && <Alert type={type} message={alertMessage} showAlert={setAlertMessage}></Alert>}
                         <div className="modal-form--body">
                             <label htmlFor="subject">{t('common:modalformSubject')}</label>
                             <input type="text" name="subject" id="subject" required value={subject} onChange={(e)=>setSubject(e.target.value)}></input>
@@ -71,11 +75,11 @@ const ModalBuy = () => {
                             <input type="text" name="name" id="name" required value={name} onChange={(e)=>setName(e.target.value)}></input>
                         </div>
                         <div className="modal-form--body">
-                        <label htmlFor="email">{t('common:modalformEmail')}</label>
+                        <label htmlFor="email" >{t('common:modalformEmail')}</label>
                             <input type="email"id="email" name="email" required value={email} onChange={(e)=>setEmail(e.target.value)}></input>
                         </div>
                         <div className="modal-form--body">
-                        <label htmlFor="text">{t('common:modalformMessage')}</label>
+                        <label htmlFor="text" >{t('common:modalformMessage')}</label>
                             <textarea name="message" id="text" required value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                         </div>
                         <button type="submit">{t('common:modalformButton')}</button>

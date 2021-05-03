@@ -196,7 +196,7 @@
         order: 1;
     }
     .product .additional{
-        padding: 50px 0;
+        padding: 50px 0 25px;
     }
     .product .additional-tehn .move{
         flex-direction: column;
@@ -208,6 +208,9 @@
             width: 100%;
         }
        
+    }
+    .product-results img{
+        margin:0 0  35px 0;
     }
     .product .additional-images--move img:nth-child(1){
         left: 0;

@@ -14,7 +14,7 @@ const Modal = () => {
                 <SideMenu type="close"></SideMenu>
             </div>
             <div className="sidebar-logo">
-                <Image src="/logo.png" width="190" height="50"></Image>
+                <Image src="/logo.png" width="45" height="50"></Image>
             </div>
             <div className="sidebar-text">
                 <p>{t('common:sidebarfirst')}

@@ -1,4 +1,5 @@
 .modal{
+    overflow: auto;
     &-container{
         display: none;
         position: fixed;
@@ -100,10 +101,12 @@
 }
 .activeModal{
     display: flex;
+    overflow-y: visible;
     .modal-body{
         opacity: 1;
     }
 }
+
 .alert{
     width: 100%;
     border-radius: 5px;
@@ -120,4 +123,25 @@
     color:#fff;
     display: flex;
     background-color: red;
+}
+.none{
+    display: none;
+}
+@include customMaxBreakPoint(786){
+    .modal{
+        &-container{
+            padding:10px 30px;
+        }
+        &-body{
+            height: 100%;
+            overflow-y: auto;
+            .close-container{
+                top: 5px;
+                right: 10px;
+            }
+        }
+    }
+    .modal-body--content button{
+        margin-bottom: 30px;
+    }
 }

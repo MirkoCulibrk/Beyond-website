@@ -1,9 +1,16 @@
-
-const Info = ({type,message}) => {
+import {useEffect} from 'react';
+const Info = ({type,message,showAlert}) => {
+    useEffect(() => {
+        setTimeout(()=>{
+            showAlert(null)
+        },3000);
+    }, []);
     return (
+        <>
         <div className={`alert ${type}`}>
-            {message}
+        {message}
         </div>
+        </>
     )
 }
 

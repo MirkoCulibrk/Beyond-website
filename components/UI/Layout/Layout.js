@@ -8,8 +8,12 @@ const Layout = ({children}) => {
         <>  
             <Head>
                 <link rel="preconnect" href="https://fonts.gstatic.com"/>
-                 <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/> 
-            </Head>
+                <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans:wght@400;700&display=swap"/>
+                 <link media="print" onload="this.onload=null;this.removeAttribute('media');"  href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/> 
+                 <noscript>
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans:wght@400;700&display=swap"/>
+                </noscript>
+                </Head>
             <UseSideMenu>
                 <ModalBuy></ModalBuy>
                 <Nav></Nav>

@@ -44,6 +44,12 @@
         @content;
     }
  }
+ @mixin customMaxBreakPoint($size) {
+    @media (max-width: $size+'px') {
+        @content;
+    }
+ }
+
 
  //fonts
  @mixin font($size,$weight,$color){

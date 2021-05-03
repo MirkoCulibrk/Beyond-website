@@ -11,13 +11,26 @@ import { NextSeo } from 'next-seo';
 const index = ({product,related}) => {
   const {t}=useTranslation();
   const {handleBuyingModal}=useSideMenu();
-  const {id,images}=product;
+  const {id,images,title}=product;
   const array=t(`common:description${id}`).split('\n');
     return (
       <>
         <NextSeo
-            title={`Beyond Product ${id}`}
-            description=""
+            title={title}
+            description={title}
+            openGraph={{
+              url:"https://beyond-website-weld.vercel.app/",
+              title:{title},
+              description:{title},
+              images:[
+                {
+                  url:"https://beyond-website-weld.vercel.app/_next/image?url=%2Fproduct1.jpg&w=256&q=100",
+                  width: 250,
+                  height:250,
+                  alt:{title}
+                  
+                }
+            ]}}
           />
           <section className="product">
           <div className="container">

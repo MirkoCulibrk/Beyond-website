@@ -1,6 +1,7 @@
 {
     "navbarproducts":"Proizvodi",
     "navbarabout":"Kontakt",
+    "navlogo":"Zvanični distributer Beyond proizvoda za Srbiju",
     "greeting":"welcome",
     "sidebar-h3":"Gde nas pronaći",
     "sidebar-h3second":"Socialne mreže",
@@ -34,13 +35,22 @@
     "contacth6":"Ukoliko imate neko pitanje ili zahtev pošaljite nam email.",
     "footerh5":"Doprinoseći naš deo ka sigurnijoj budućnosti",
     "footercontact":"Kontakt Informacije",
-    "footerlocation":"Stranica",
+    "footerlocation":"Stranice",
     "sidebarfirst":"Globalni lider u esteckoj stomatologiji",
     "products":"Naši proizvodi",
     "results":"Rezultati",
     "title6":"BEYOND SOLO set",
     "info6":"Ekonomični dvostruki set",
-    "description6":"Sastoji se od 35% vodonik peroksida koji se potom kombinuje sa RS gelom ( gel za smanjivanje osetljivosti zuba; kalijum nitrat, hidroksiapatit). Kombinacijom se redukuje koncentracija vodonik peroksida na 6% što dodatno umanjuje osetljivost zuba i omogućava bržu remineralizaciju gleđi."
+    "description6":"Sastoji se od 35% vodonik peroksida koji se potom kombinuje sa RS gelom ( gel za smanjivanje osetljivosti zuba; kalijum nitrat, hidroksiapatit). Kombinacijom se redukuje koncentracija vodonik peroksida na 6% što dodatno umanjuje osetljivost zuba i omogućava bržu remineralizaciju gleđi.",
+    "keywords":"izbeljivanje zuba, oprema za stomatologe, najbolji uređaji za izbeljivanje zuba, blistav osmeh",
+    "title":"Zvanični distributer Beyond proizvoda za Srbiju",
+    "seodescripion":"Zvanični distributer Beyond proizvoda za Srbiju i prostor balkana. 10 godina za redom dobijena nagrada za najbolji sistem za beljenje zuba. 248000 zadovoljnih stomatologa širom sveta.",
+    "mainPageKeywords":"izbeljivanje zuba, izbor stomatologa, najnovija tehnologija za belenje zuba, izbeljivanje zuba,blistav osmeh",
+    "contact":"Kontaktirajte nas",
+    "contactdesc":"Kontakt stranica za zvanicnog distributera Beyond proizvode",
+    "titleproducts":"Beyond Proizvodi",
+    "descproducts":"Proizvodi kompanije Beyond dostupni na Srpskom tržištu"
+
     
 
 }
