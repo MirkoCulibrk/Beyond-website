@@ -51,8 +51,6 @@ const ModalBuy = () => {
        }; 
        
     }, [isOpenModal]);
-    console.log(alertMessage);
-    console.log(locale)
     return (
         <div className={`modal-container ${isOpenModal?'activeModal':''}`} >
             <div className="modal-body">

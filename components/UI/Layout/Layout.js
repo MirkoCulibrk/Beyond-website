@@ -1,9 +1,15 @@
 import Footer from "../../Footer/Footer";
+import {useEffect} from 'react';
 import Head from 'next/head';
 import Nav from '../../Nav/Nav';
 import {UseSideMenu} from '../../../context/useSideMenu';
 import ModalBuy from '../ModalBuy/ModalBuy';
+import { useMediaQuery } from 'react-responsive'
 const Layout = ({children}) => {
+    const smallDevicee = useMediaQuery({
+        query: '(max-device-width: 768px)'
+      });
+    console.log(smallDevicee)
     return (
         <>  
             <Head>
@@ -14,7 +20,7 @@ const Layout = ({children}) => {
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans:wght@400;700&display=swap"/>
                 </noscript>
                 </Head>
-            <UseSideMenu>
+            <UseSideMenu smallDevice={smallDevicee}>
                 <ModalBuy></ModalBuy>
                 <Nav></Nav>
                 <main>
