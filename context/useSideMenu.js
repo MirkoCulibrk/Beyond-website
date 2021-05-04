@@ -17,9 +17,13 @@ export class UseSideMenu extends Component{
         window.addEventListener("resize",this.resize.bind(this));
     }
     resize(){
-        this.setState({
-            smallDevice:window.innerWidth<=786
-        })
+        let smallDevices=(window.innerWidth<=768);
+        if(smallDevices !== this.state.smallDevice){
+            this.setState({
+                smallDevice:smallDevices
+            })
+        }
+        
     }
     componentWillUnmount() {
         window.removeEventListener("resize", this.resize.bind(this));

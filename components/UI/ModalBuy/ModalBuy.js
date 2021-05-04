@@ -18,7 +18,7 @@ const ModalBuy = () => {
     const [message,setMessage]=useState('');
     const handleSubmit=(e)=>{
         e.preventDefault();
-        emailjs.sendForm('service_45m4otr','template_528wdrr',e.target,'user_YcpAZT7O1wOp2TffKntpV')
+        emailjs.sendForm('service_z90f6o5','template_e8dr6nb',e.target,'user_WvaUIQngBRnLekT9HnQvp')
                 .then(()=>{
                    
                     if(locale=='en'){
