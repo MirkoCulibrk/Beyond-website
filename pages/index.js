@@ -54,7 +54,7 @@ export default function Home() {
               }
             ]
           }}
-          keywords={`${t('common:mainPageKeywords')}`}
+          // keywords={`${t('common:mainPageKeywords')}`}
         />
         <Banner></Banner>
         <Numbers></Numbers>

@@ -85,6 +85,10 @@
         
     }
 }
+.modal-form--span{
+    @include font(0.8rem,400,rgba(220, 20, 60));
+    
+}
 @include customMaxBreakPoint(992){
     .contact-formcontainer{
         padding: 0 40px;

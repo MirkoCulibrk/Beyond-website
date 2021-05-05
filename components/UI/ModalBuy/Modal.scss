@@ -22,6 +22,7 @@
         position: relative;
         opacity: 0;
         transition: all 0.3s ease-in;
+        max-width: 350px;
         .close-container{ 
             position: absolute;
             right: -11px;
@@ -48,7 +49,7 @@
                 font-family: inherit;
                 font-size: 0.8rem;
                 color:$textColor;
-                margin: 10px 0;
+                margin: 5px 0;
                 max-width: 290px;
                 text-align: justify;
             }
@@ -68,7 +69,7 @@
                 width: 100%;
                 vertical-align: top;
                 margin: 0 0 10px;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
                 padding: 11px 10px;
                 font-family: inherit;
                 font-size: 15px;
@@ -127,6 +128,8 @@
 .none{
     display: none;
 }
+
+
 @include customMaxBreakPoint(786){
     .modal{
         &-container{
