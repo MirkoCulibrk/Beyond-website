@@ -7,7 +7,7 @@
     "build": "next build",
     "analyze": "cross-env ANALYZE=true yarn build",
     "start": "cross-env NODE_ENV=production node server.js",
-    "startagain":"next start",
+    "startagain": "next start",
     "export": "next export"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
     "next-images": "^1.7.0",
     "next-seo": "^4.24.0",
     "next-translate": "^1.0.6",
+    "nextjs-cors": "^1.0.5",
     "nodemailer": "^6.6.0",
     "react": "17.0.2",
     "react-compare-image": "^3.1.0",
