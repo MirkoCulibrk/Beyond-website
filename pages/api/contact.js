@@ -23,9 +23,7 @@ export default async (req, res) => {
       <p><strong>Poruka:</strong>${message}</p>
       `
     });
-    console.log('message sent',emailRes.messageId)
   }catch(err){
-    console.log(err)
   }
   res.status(200).json(req.body)
 }

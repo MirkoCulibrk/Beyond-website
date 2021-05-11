@@ -19,12 +19,12 @@ const index = ({product,related}) => {
             title={title}
             description={title}
             openGraph={{
-              url:"https://beyond-website-weld.vercel.app/",
+              url:"https://blistavosmeh.com/",
               title:{title},
               description:{title},
               images:[
                 {
-                  url:"https://beyond-website-weld.vercel.app/_next/image?url=%2Fproduct1.jpg&w=256&q=100",
+                  url:"https://blistavosmeh.com/_next/image?url=%2Fproduct1.jpg&w=256&q=100",
                   width: 250,
                   height:250,
                   alt:{title}
@@ -75,7 +75,6 @@ export const getServerSideProps=async ({params})=>{
       product=data.filter((product)=>product.id.toString()===params.id);         
       related=data.filter((product)=>product.id.toString()!==params.id).splice(0,4);
     }catch(error){
-    console.log(error);
   }
   return{
     props:{

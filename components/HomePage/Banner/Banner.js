@@ -38,7 +38,7 @@ const Banner = () => {
                     <h2>{t('home:info')}</h2>
                 </div>
                 <div className="banner-offervideo"  >
-                    <video src="/video.mp4" autoPlay={true} loop={true} muted={true} id="video" ></video>
+                    <video src="/video.mp4" playsInline autoPlay loop muted id="video" ></video>
                 </div>
             </div>
         </section>

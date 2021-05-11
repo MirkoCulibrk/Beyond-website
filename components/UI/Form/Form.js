@@ -23,7 +23,7 @@ const Form = ({type}) => {
     async function onSubmitForm(values){
         let config={
             method:'post',
-            url:'https://beyond-website-mirkoculibrk.vercel.app/api/contact',
+            url:'https://blistavosmeh.com/api/contact',
             headers:{
                 'Content-Type':'application/json'
             },
@@ -31,8 +31,6 @@ const Form = ({type}) => {
         };
         try{
             const response=await axios(config);
-            console.log(response);
-            
             if(response.status==200){
                 if(locale=='en'){
                     setAlertMessage('Your message is sent.')
@@ -56,7 +54,6 @@ const Form = ({type}) => {
             setShowAlert(true)
         }
     }
-    console.log(nameError)
     return (
         <form onSubmit={handleSubmit(onSubmitForm)}>
             {showAlert && <Alert type={typeAlert} message={alertMessage}showAlert={setShowAlert}></Alert>}
@@ -114,8 +111,8 @@ const Form = ({type}) => {
                         message:`${nameError}`
                     },
                     minLength:{
-                        value:50,
-                        message:`${locale=='sr'?'Poruka mora bude duža od predhodne':'Message must be longer ther previous message'}`
+                        value:30,
+                        message:`${locale=='sr'?'Poruka mora bude duža od 30 karaktera.':'Message must be longer ther 30 characters'}`
 
                     },
                     maxLength:{
