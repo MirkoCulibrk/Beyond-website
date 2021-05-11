@@ -56,7 +56,7 @@ export default function Home() {
           }}
           keywords={`${t('common:mainPageKeywords')}`}
         />
-        <Banner></Banner>
+        {/* <Banner></Banner> */}
         <Numbers></Numbers>
         <Slider></Slider>
         <Products ></Products>

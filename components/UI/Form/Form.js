@@ -20,6 +20,7 @@ const Form = ({type}) => {
     const subjectError=locale==='sr'?'Molimo Vas unesite temu emaila':"Please enter email subject";
     const nameError=locale=='sr'?'Molimo Vas unesite Vase ime':'Please enter your name';
     const emailError=locale=='sr'?'Molimo Vas unesite email adres':'Please enter email address';
+    const messageError=locale=='sr'?'Molimo Vas unesite tekst poruke':'Please enter message';
     async function onSubmitForm(values){
         let config={
             method:'post',
@@ -108,7 +109,7 @@ const Form = ({type}) => {
                 ref={register({
                     required:{
                         value:true,
-                        message:`${nameError}`
+                        message:`${messageError}`
                     },
                     minLength:{
                         value:30,
