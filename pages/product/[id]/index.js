@@ -19,12 +19,11 @@ const index = ({product,related}) => {
             title={title}
             description={title}
             openGraph={{
-              url:"https://blistavosmeh.com/",
               title:{title},
               description:{title},
               images:[
                 {
-                  url:"https://blistavosmeh.com/_next/image?url=%2Fproduct1.jpg&w=256&q=100",
+                  url:"https://blistavosmeh.org/_next/image?url=%2Fproduct1.jpg&w=256&q=100",
                   width: 250,
                   height:250,
                   alt:{title}

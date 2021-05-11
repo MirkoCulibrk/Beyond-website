@@ -19,12 +19,12 @@ const Form = ({type}) => {
     const [alertMessage,setAlertMessage]=useState('');
     const subjectError=locale==='sr'?'Molimo Vas unesite temu emaila':"Please enter email subject";
     const nameError=locale=='sr'?'Molimo Vas unesite Vase ime':'Please enter your name';
-    const emailError=locale=='sr'?'Molimo Vas unesite email adres':'Please enter email address';
+    const emailError=locale=='sr'?'Molimo Vas unesite email adresu':'Please enter email address';
     const messageError=locale=='sr'?'Molimo Vas unesite tekst poruke':'Please enter message';
     async function onSubmitForm(values){
         let config={
             method:'post',
-            url:'https://blistavosmeh.com/api/contact',
+            url:'https://blistavosmeh.org/api/contact',
             headers:{
                 'Content-Type':'application/json'
             },
