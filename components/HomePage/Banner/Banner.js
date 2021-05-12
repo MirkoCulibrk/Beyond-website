@@ -18,8 +18,7 @@ const Banner = () => {
                                                   
                             <h2 className="banner-text--info">{t('home:bannerh5')}</h2>
                             <Button text={t('home:learnmore')} action={executeScroll}></Button>
-                                          
-                            
+                                   
                         </div>
                         <div className="banner-imgcontainer row">
                             <Image src="/women.webp" className="banner-imgcontainer--img"layout="intrinsic" width="310" height="485" alt="women smile"quality={100}/>

@@ -24,7 +24,7 @@ const Form = ({type}) => {
     async function onSubmitForm(values){
         let config={
             method:'post',
-            url:'https://www.blistavosmeh.org/api/contact',
+            url:'https://www.blistavosmeh.com/api/contact',
             headers:{
                 'Content-Type':'application/json'
             },

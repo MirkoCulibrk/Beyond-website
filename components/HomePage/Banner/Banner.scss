@@ -66,6 +66,25 @@
     }
   
 }
+.soon{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img{
+        
+    
+    width: 850px;
+    height: 500px;
+        img{
+            width: 100%;
+        }
+    }
+    
+    
+ 
+}
 @include customMaxBreakPoint(992){
     .banner{
         &-imgcontainer{
@@ -97,6 +116,12 @@
         }
     }
     }
+    .soon{
+        .img{
+            width: 500px;
+            height: 300px;
+        }
+    }
 }
 
 @include customMaxBreakPoint(576){
@@ -109,7 +134,7 @@
             h1{
                 font-size: 2.7rem;
             }
-            h5{
+            h2{
                 line-height: 2.1rem;
                 margin-bottom: 25px;
             }
@@ -120,4 +145,11 @@
             }
         }
     }
+    .soon{
+        padding: 20px;
+        .img{
+            width: 100%;
+        }
+    }
+
 }
