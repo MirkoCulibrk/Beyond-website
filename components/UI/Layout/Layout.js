@@ -19,20 +19,15 @@ const Layout = ({children}) => {
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Open+Sans:wght@400;700&display=swap"/>
                 </noscript>
                 </Head>
-            {/* <UseSideMenu smallDevice={smallDevicee}>
+            <UseSideMenu smallDevice={smallDevicee}>
                 <ModalBuy></ModalBuy>
                 <Nav></Nav>
                 <main>
                     {children}
                 </main>
                 <Footer></Footer>
-            </UseSideMenu> */}
-             <div className="soon">
-                 <div className="img">
-                     
-                <img src="/soon.png"></img>
-                 </div>
-            </div>
+            </UseSideMenu>
+             
         </>
     )
 }
