@@ -7,15 +7,15 @@ export default async (req, res) => {
     port:465,
     secure:true,
     auth:{
-      user:process.env.USER,
-      pass:process.env.PASS
+      user:'beyondsrbijawebsite@gmail.com',
+      pass:'oxbwdprpjsfpftob'
     }
   });
   try{
     const emailRes=await transporter.sendMail({
       // who is sending
       from:email,
-      to:process.env.TO,
+      to:'beyondteethserbia@gmail.com',
       subject:`${subject}`,
       html:`<p>Dobili ste novi mail.</p>
       <p><strong>Ime:</strong>${name}</p>
