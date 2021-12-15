@@ -49,6 +49,8 @@ const index = ({product,related}) => {
                   <Button text={t('common:productButton')}  action={handleBuyingModal}></Button>
                 </div>
               </div>
+              {id==1?<div class="iframe-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/fVZqN5eK5Zg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>:null}
+              {id==2?<div class="iframe-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/BewrNKIpuOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>:null}
               {id==2?<AdditionalInfo></AdditionalInfo>:null}
               {id==1 && <Results id={id}></Results>}
               {id==2 && <Results id={id}></Results>}
